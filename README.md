@@ -195,143 +195,15 @@ Merge and rebase all commits at once (single commit):
 $ git merge --squash <branch>
 ```
 
----
+[Undoing Things](./UNDOING.md)
 
-## Rebasing
+[Rebasing](./REBASING.md)
 
-Rebase feature branch onto main to incorporate new changes made to main (prevents unnecessary merge commits into feature, keeping history linear):
-
-```bash
-$ git checkout feature
-$ git rebase main
-```
-
-Iteratively clean up a branch's commits before rebasing onto main:
-
-```bash
-$ git rebase -i main
-```
-
-Iteratively rebase the last 3 commits in the current branch:
-
-```bash
-$ git rebase -i Head~3
-```
-
----
-
-## Undoing Things
-
-Move (and/or rename) a file and stage it:
-
-```bash
-$ git mv <existing-path> <new-path>
-```
-
-Remove a file from the working directory and from staging area, then stage the deletion:
-
-```bash
-$ git rm <file>
-```
-
-Reset a file or a commit:
-
-- Reset a file from staging area only:
-  ```bash
-  $ git reset <file>
-  ```
-- Reset the index and working directory to a specific commit (read-only):
-  ```bash
-  $ git reset --hard <commit_ID>
-  ```
-
-Revert a commit by creating a new commit:
-
-```bash
-$ git revert <commit_ID>
-```
-
-Restore file to a specific commit (leaves staging alone):
-
-```bash
-$ git checkout <commit_ID> <file>
-```
-
----
-
-## Review your Repo
-
-List new or modified files not yet committed:
-
-```bash
-$ git status
-```
-
-List commit history, with respective IDs:
-
-```bash
-$ git log --oneline
-```
-
-Show changes to unstaged files (to changes of staged files, add `--cached` option):
-
-```bash
-$ git diff
-```
-
-Show changes between two commits:
-
-```bash
-$ git diff commit1_ID commit2_ID
-```
-
----
-
-## Stashing
-
-Store modified and staged changes (to include untracked files, add `-u` flag. For untracked & ignored files, add `-a`):
-
-```bash
-$ git stash
-```
-
-As above, but add a comment:
-
-```bash
-$ git stash save "comment"
-```
-
-Partial stash (stash just single file):
-
-```bash
-$ git stash push -p
-```
-
-List all stashes:
-
-```bash
-$ git stash list
-```
-
-Apply stash:
-
-```bash
-$ git stash apply stash@{1}
-```
-
-Delete stash at index 1 (omit stash@{n} to delete the last stash):
-
-```bash
-$ git stash drop stash@{1}
-```
-
-Clear all stashes:
-
-```bash
-$ git stash clear
-```
+[Review your Repo](./REVIEWREPO.md)
 
 [Synchronizing](./SYNCHRONIZING.md)
+
+[Stashing](./STASHING.md)
 
 ---
 
