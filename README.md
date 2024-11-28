@@ -1,5 +1,7 @@
 # Git Cheat Sheet
 
+[All Commands](./ALL.md)
+
 [Set the Name and Email for Git Commits](./SETUP.md)
 
 [Start a Project](./STARTPROJECT.md)
