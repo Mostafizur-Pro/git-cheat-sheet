@@ -1,4 +1,4 @@
-# SETUP
+# Set the Name and Email for Git Commits
 
 Set the name and email that will be attached to your commits and tags:
 
