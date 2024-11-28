@@ -1,4 +1,3 @@
-
 ## Merging
 
 Merge a branch into a branch B (add `--no-ff` to avoid fast-forward merge):
